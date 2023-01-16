@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --kobi: #e6a5bd;
+  --han-purple: #381dfc;
+  --middle-blue: #65d5e8;
+  --maximum-yellow: #f3f33b;
+  --ruby: #de1761;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Comfortaa", sans-serif;
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+header {
+  background-color: var(--han-purple);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  color: white;
+}
+
+header > h1 {
+  text-align: center;
+  font-size: 1.7em;
+}
+/* HEADER */
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main > h2 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* LOADER */
+.loader-container {
+  display: flex;
+  justify-content: center;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid black;
+  border-color: black transparent black transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* LOADER */
+
+option-form {
+  margin: 20px;
+}
+
+.quiz-container {
+  margin: 20px;
+  width: 80%;
+}
+
+quiz-item {
+  margin: 20px;
+}
+
+finish-button {
+  margin: 5px;
+}
+
+surrender-button {
+  margin: 5px 5px 20px 5px;
+}
+
+.stats-container {
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.stats-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 10px;
+  font-size: 1em;
+  text-align: center;
+}
+
+#correct {
+  color: green;
+}
+
+#wrong {
+  color: red;
+}
+
+.score-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+.score-container > strong {
+  font-size: 5em;
+}
+
+#finishQuiz {
+  border: black 1px solid;
+  border-radius: 10px;
+  background-color: var(--maximum-yellow);
+  font-family: "Comfortaa";
+  font-weight: 500;
+  font-size: 1.5em;
+  min-height: 44px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+#backToHome {
+  font-size: 1.5em;
+  font-weight: 900;
+  margin-bottom: 20px;
+  min-height: 44px;
+  color: var(--han-purple);
+}
+
+#backToHome:hover {
+  color: var(--middle-blue);
+}
+
+#continueQuiz {
+  font-size: 1.5em;
+  font-weight: 900;
+  min-height: 44px;
+  color: var(--ruby);
+  display: none;
+}
+
+#continueQuiz:hover {
+  color: var(--kobi);
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--ruby);
+  color: white;
+  padding: 10px;
+}
+
+footer > p {
+  font-size: 0.9em;
+  text-align: center;
+}
+
+footer > p > a {
+  color: var(--maximum-yellow);
+  display: inline-block;
+}
+/* FOOTER */
+
+@media screen and (min-width: 600px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  option-form {
+    width: 70%;
+  }
+
+  .stats-item {
+    font-size: 1.2em;
+  }
+
+  .score-container {
+    height: 200px;
+  }
+  
+  .score-container > strong {
+    font-size: 7em;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  option-form {
+    width: 60%;
+  }
+
+  .quiz-container {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  option-form {
+    width: 40%;
+  }
+
+  .stats-item {
+    font-size: 1.5em;
+    margin: 0 20px;
+  }
+
+  .score-container {
+    height: 250px;
+  }
+  
+  .score-container > strong {
+    font-size: 10em;
+  }
+}
